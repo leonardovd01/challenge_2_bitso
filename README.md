@@ -45,7 +45,7 @@ The project includes a script that processes the raw information and creates the
 1. **master_tables.py**:
 This script performs the ETL tasks for Challenge 2. It will save six CSV files. You can run it using the following command:
     ```bash
-    python get_spread.py
+    python master_tables.py
 
 ## Data Model Description
 This data model is designed to efficiently manage and analyze user transactions and activities within the system. It consists of several interconnected tables, each serving a specific purpose. Below is a detailed breakdown of each table and their roles:
