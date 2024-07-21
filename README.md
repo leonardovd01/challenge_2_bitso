@@ -48,7 +48,32 @@ This script performs the ETL tasks for Challenge 2. It will save six CSV files. 
     python master_tables.py
 
 ## Data Model Description
-This data model is designed to efficiently manage and analyze user transactions and activities within the system. It consists of several interconnected tables, each serving a specific purpose. Below is a detailed breakdown of each table and their roles:
+This data model is designed to efficiently manage and analyze user transactions and activities within the system. It employs a relational database schema with an emphasis on normalization and efficient querying. Some of the modeling techniques used are:
+
+1. Normalization: Data normalization reduces redundancy and improves data integrity by minimizing duplication. This is why user information is separated, a dates table is created, and deposits and withdrawals are separated from the transactions table.
+
+2. Star Schema: Elements of a star schema are incorporated, such as a central fact table (Transactions) linked to dimension-like tables (Users, Dates).
+
+3. Use of Foreign Keys: Foreign keys are used to establish relationships between tables, ensuring that the database does not contain orphan records.
+
+Reasons for Choosing These Techniques:
+
+1. Efficient Querying: The star schema, with a central transaction table, reduces duplicate IDs and enables efficient querying by minimizing the number of joins required for most queries.
+
+2. Data Integrity and Accuracy: Normalization maintains data accuracy and consistency, which is crucial for transactional systems like financial data.
+
+3. Scalability and Flexibility: The structure allows for easier scaling. For example, if the finance team needs to implement time-based analysis, such as reviewing deposits by quarter, additional values can be added to the dates table, allowing comprehensive analysis.
+
+Potential Downsides:
+
+1. Maintenance: While normalization improves querying performance, it can complicate maintenance, increasing costs and time.
+
+2. Development: Normalized structures may require frequent schema updates if the information requirements change.
+
+3. Date Handling: Using a date table enhances capabilities for time-series analysis, but the need to retain timestamp values for precise tracking of events, deposits, or withdrawals can introduce redundancy.
+
+
+Below is a detailed breakdown of each table and their roles:
 
 ### Users Table
 Purpose: Stores unique IDs of users.
@@ -116,6 +141,7 @@ Purpose: Captures non-financial user activities, such as logins and level change
 ## Entity Relationship Model
 
 ![Example Image](ERD.png)
+
 
 ## Contributing
 Contributions are welcome! Please follow these steps to contribute:
