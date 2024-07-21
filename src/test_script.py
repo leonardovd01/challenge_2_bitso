@@ -5,7 +5,7 @@ import io
 import zipfile
 
 # We import all the functions from master_tables
-from master_tables import (
+from src.master_tables import (
     download_and_unzip,
     normalize_datetime,
     load_and_transform_data,
@@ -37,7 +37,7 @@ class TestMasterTables(unittest.TestCase):
         expected_df = pd.read_csv(io.StringIO(mock_csv_content))
         pd.testing.assert_frame_equal(df, expected_df)
         print("test_download_and_unzip passed")
-        
+
 
     def test_normalize_datetime(self):
         dt_series = pd.Series(['2023-01-01T00:00:00Z', '2023-01-02T12:00:00Z'])
