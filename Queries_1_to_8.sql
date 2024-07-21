@@ -1,4 +1,4 @@
--- NOTE. Note: The queries were tested using pandasql. Please be aware that some structures, especially the Date type, might differ depending on the database used.
+-- Note: The queries were tested using pandasql. Please be aware that some structures, especially the Date type, might differ depending on the database used.
 
 -- Query 1 How Many Users Were Active on a Given Day (They Made a Deposit or Withdrawal)
 
