@@ -140,7 +140,7 @@ Purpose: Captures non-financial user activities, such as logins and level change
 
 ## Entity Relationship Model
 
-![Example Image](ERD.png)
+![Example Image](docs/ERD.png)
 
 
 ## Contributing
