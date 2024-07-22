@@ -5,6 +5,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Unit Testing](#utest)
 - [Data Model](#datamodel)
 - [Entity Relationship Model](#erd)
 - [Contributing](#contributing)
@@ -42,10 +43,16 @@ Follow these steps to set up and run the project locally:
 ## Usage
 The project includes a script that processes the raw information and creates the necessary CSV files for table creation.
 
+
+
 1. **master_tables.py**:
 This script performs the ETL tasks for Challenge 2. It will save six CSV files. You can run it using the following command:
     ```bash
     python master_tables.py
+
+## Unit Testing
+
+You can find the unit testing code in `test_script.py` and the requirements in `requirements_test.txt`.
 
 ## Data Model Description
 This data model is designed to efficiently manage and analyze user transactions and activities within the system. It employs a relational database schema with an emphasis on normalization and efficient querying. Some of the modeling techniques used are:
